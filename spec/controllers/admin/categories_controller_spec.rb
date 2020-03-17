@@ -15,7 +15,19 @@ describe Admin::CategoriesController do
     get :index
     assert_response :redirect, :action => 'index'
   end
+  
+  describe "test_new" do
+    before(:each) do
+      get :id => Category(:category).id
+    end
 
+    it 'should create new category' do
+      @test = Category.new
+      @test.save
+      assert(@test.id.nil? == false)
+    end
+  end
+  
   describe "test_edit" do
     before(:each) do
       get :edit, :id => Factory(:category).id

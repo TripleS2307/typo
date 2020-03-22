@@ -1,0 +1,1 @@
+Coverage report generated for RSpec to /home/ec2-user/environment/typo/coverage. 9916 / 12530 LOC (79.14%) covered.
